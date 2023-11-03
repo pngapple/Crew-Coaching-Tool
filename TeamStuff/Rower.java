@@ -1,4 +1,7 @@
+package TeamStuff;
 import java.util.ArrayList;
+
+import ErgStuff.ErgPiece;
 
 public class Rower {
     private String name;

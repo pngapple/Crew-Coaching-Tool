@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-import TeamStuff.TeamData;
+import Exceptions.RowerNotFoundException;
+import TeamStuff.*;
 
 public class Main {
     private static String WELCOME_MESSAGE = "Welcome to Crew Coaching Tool!";
@@ -19,6 +20,14 @@ public class Main {
 
             if (option == 1) {
                 System.out.println(RUN_ROWER_MENU);
+                try {
+                    RowerMenu rowMenu = new RowerMenu(team.findRowerByName(scan.nextLine()));
+                    rowMenu.runRowerMenu();
+                } catch (RowerNotFoundException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 
             } else if (option == 2) {
 

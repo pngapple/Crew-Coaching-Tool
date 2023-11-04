@@ -24,10 +24,12 @@ public class RowerMenu {
                     for (ErgPiece piece : rower.getErgPieces()) {
                         System.out.println(piece);
                     }
+                case 2:
                 default:
                     System.out.println("Please enter a valid choice");
             }
         }
-        
     }
+
+    
 }

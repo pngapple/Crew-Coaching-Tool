@@ -1,4 +1,8 @@
 package TeamStuff;
+
+import java.util.Scanner;
+import ErgStuff.ErgPiece;
+
 public class RowerMenu {
     private Rower rower;
     private String MENU_OPTION_1 = "View Erg Pieces";
@@ -9,7 +13,21 @@ public class RowerMenu {
         this.rower = rower;
     }
 
-    public void runRowerMenu() {
+    public void runRowerMenu(Scanner scan) {
         System.out.println("What action would you like to perform?");
+        System.out.println(MENU_OPTION_1);
+        System.out.println(MENU_OPTION_2);
+        System.out.println(MENU_OPTION_3);
+        while (true) {
+            switch (scan.nextInt()) {
+                case 1:
+                    for (ErgPiece piece : rower.getErgPieces()) {
+                        System.out.println(piece);
+                    }
+                default:
+                    System.out.println("Please enter a valid choice");
+            }
+        }
+        
     }
 }

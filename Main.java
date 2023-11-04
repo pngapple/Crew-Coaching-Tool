@@ -22,7 +22,7 @@ public class Main {
                 System.out.println(RUN_ROWER_MENU);
                 try {
                     RowerMenu rowMenu = new RowerMenu(team.findRowerByName(scan.nextLine()));
-                    rowMenu.runRowerMenu();
+                    rowMenu.runRowerMenu(scan);
                 } catch (RowerNotFoundException e) {
                     e.printStackTrace();
                 } catch (Exception e) {
